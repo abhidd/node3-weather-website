@@ -20,6 +20,10 @@ const forecast = (lat, long, callback) => {
             str += currently.precipProbability
             str += '% chance of rain.'
 
+            str += ' Coldest feels like temperature: '
+            str += daily.data[0].apparentTemperatureMin
+            str += ' degrees!'
+
             callback(undefined, {
                 summary: daily.data[0].summary,
                 string: str
